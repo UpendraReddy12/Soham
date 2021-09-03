@@ -1,0 +1,26 @@
+button
+{
+    background-color: rgb(6, 100, 53);
+    color: rgb(255, 255, 255);
+    margin-right: 510px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+th
+{
+    text-align: left;
+}
+td
+{
+    text-align: right;
+}
+Tr:nth-child(odd)
+{
+   background-color: rgb(122, 150, 155);
+}
+tr:hover{
+    background-color: gray;
+}
+table{
+    width: 40%;
+}
