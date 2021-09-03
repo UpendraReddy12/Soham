@@ -1,3 +1,11 @@
+button
+{
+    background-color: rgb(6, 100, 53);
+    color: rgb(255, 255, 255);
+    margin-right: 510px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
 th
 {
     text-align: left;
@@ -13,31 +21,7 @@ Tr:nth-child(odd)
 tr:hover{
     background-color: gray;
 }
- li{
-     float:left;
- }
- ul{
-     list-style-type: none;
-     margin: 0%;
-     padding: 0%;
-     overflow: hidden;
-     background-color: white;
- }
- li a{
-     display: block;
-     color: black;
-     text-align: center;
-     padding: 10px 12px;
-     text-decoration: none;
-     font-size: 15px;
- }
- li a:hover:not(.active){
-      background-color : green;
- }
- .active{
-     background-color: green;
- }
- table{
-     width: 55%;
- }
- 
+table{
+    width: 40%;
+}
+  
