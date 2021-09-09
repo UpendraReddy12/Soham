@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <!-- <link rel="icon" href="image/soham-logo.jpeg"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <title>Soham Academy</title>
+</head>
+
+<body>
+
+
+    <div class="w3-row">
+        <div class="w3-col w3-container w3-green" style="width: 20%;"></div>
+
+
+        <!-- 60% div col container starts  -->
+        <div class="w3-col w3-container" style="width: 60%;">
+
+            <div class="w3-center w3-container">
+
+                <h1>
+                    <p>Welcome to Soham Quiz</p>
+                </h1>
+
+            </div>
+
+
+            <!--Navigation bar-->
+            <div class="w3-bar w3-border w3-round ">
+                <a href=".\..\day4\indexw3.html" class="w3-bar-item w3-button w3-hover-orange">DashBoard</a>
+                <a href=".\..\day5\search.html" class="w3-bar-item w3-button w3-hover-orange ">Search</a>
+                <a href="createquestion.html" class="w3-bar-item w3-button  w3-green  w3-hover-green">Create a Question
+                </a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-orange">My Questions</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-orange">Review</a>
+            </div>
+            <!-- end of Navigation bar -->
+
+            <!-- form  div starts  -->
+
+            <div class="w3-container w3-border w3-section w3-text-teal">
+
+                <!-- form starts  -->
+
+                <form class=" " action="/action_page.php">
+
+                    <!-- select a theme  -->
+
+                    <label for="selectTheme"><strong> Select a Theme </strong> </label>
+
+                    <select class="w3-select w3-border w3-left-align" id="selectTheme" name="selectTheme" required>
+
+                        <option value="" disabled selected required>Select a Theme </option>
+
+                        <option value="1">Bharat & Its States</option>
+                        <option value="2">Hotspots in Bharat</option>
+                        <option value="3">People of Bharat</option>
+                        <option value="4">Bharatiya Itihasa</option>
+                        <option value="5">World Arouond Us</option>
+                        <option value="6">Our Body</option>
+                        <option value="7">English Language</option>
+
+                    </select>
+
+
+                    <!-- selecting a question type  -->
+                    <label for="selectQuestionType"><strong> Select a Question Type</strong> </label>
+
+                    <select class="w3-select w3-border" id="selectQuestionType" name="selectQuestionType" onChange="showQuiz(this.id,value)" required>
+
+                        <option value="" disabled selected>Select a Question Type </option>
+
+                        <option value="QnA"> Q & A </option>
+                        <option value="MultipleChoice"> Multiple Choice </option>
+                        <option value="TorF"> True or False </option>
+
+
+                    </select>
+
+                    <!-- type the Question -->
+                    <label class="w3-text-teal"><strong>Question</strong></label>
+                    <input class="w3-input w3-border w3-grey" type="text" name="typeQuestion" id="typeQuestion"
+                        placeholder="Type your question here" required>
+
+                    <!-- Q n A -->
+                    <div class="w3-hide" id="QnA">
+                        <label class="w3-text-teal"><strong> Answer </strong></label>
+                        <input class="w3-input w3-border w3-grey" type="text" name="typeAnswer" id="typeAnswer"
+                            placeholder="Type your answer here" required>
+
+                    </div>
+                    <!-- multiple choice -->
+                    <div class=" w3-hide" id="MultipleChoice">
+                        <div class="w3-row-padding ">
+
+                            <div class="w3-text-teal">
+                                <strong> Multiple Choice Options </strong>
+                            </div>
+
+                            <div class="w3-col w3-half  w3-left-align">
+                                <label class="w3-text-teal"><strong>answer A </strong></label>
+                                <input class="w3-input w3-border w3-grey" type="text" name="answerA" id="answerA"
+                                    placeholder="Type your question here" required>
+                                <label class="w3-text-teal"><strong>answer B</strong></label>
+                                <input class="w3-input w3-border w3-grey" type="text" name="answerB" id="answerB"
+                                    placeholder="Type your question here" required>
+
+                            </div>
+
+
+                            <div class="w3-col w3-half   w3-left-align ">
+                                <label class="w3-text-teal"><strong>answer C</strong></label>
+                                <input class="w3-input w3-border w3-grey" type="text" name="answerC" id="answerC"
+                                    placeholder="Type your question here" required>
+
+                                <label class="w3-text-teal"><strong>answer D </strong></label>
+                                <input class="w3-input w3-border w3-grey" type="text" name="answerD" id="answerD"
+                                    placeholder="Type your question here" required>
+
+                            </div>
+                            <!-- radio buttons -->
+
+                           
+                            <div class="w3-text-teal">
+                                <strong> Answer</strong>
+                            </div>
+                              <input type="radio" id="optionA" name="selectAnswer" value="optionA" required>
+                              <label for="optionA">A</label>
+                              <input type="radio" id="optionB" name="selectAnswer" value="optionB"  >
+                              <label for="optionB">B</label>
+                              <input type="radio" id="optionC" name="selectAnswer" value="optionC"  >
+                             <label for="optionC">C&nbsp;</label>
+                            <input type="radio" id="optionD" name="selectAnswer" value="optionD"  >
+                             <label for="optionD">D</label>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- T or F -->
+                    <div class="w3-hide " id="TorF">
+
+                        <div class="w3-text-teal ">
+                            <strong> Answer</strong>
+                        </div>
+                        <input type="radio" id="true" name="TorF" value="true" required>
+                          <label for="true">True </label>
+                          <input type="radio" id="false" name="TorF" value="false">
+                          <label for="false">False </label>
+                    </div>
+
+
+                    <!-- upload photo -->
+                    <label class="w3-text-teal"> <strong>Upload a File (Optional) </strong> </br> </label>
+                    <input type="file" id="uploadPhoto" name="uploadPhoto">
+
+                    <!-- Aditional Information -->
+                    <label class="w3-text-teal"> <br> <strong>Additional Information </strong> </br> </label>
+                    <input class="w3-input w3-border w3-grey" type="text" placeholder="Additional Information"
+                        id="Additional Information" >
+
+                    <!-- submit button -->
+                    <button type="submit" onclick="" >Submit</button>
+
+                    <!-- <p><button class="w3-btn w3-light-grey w3-border ">Submit</button></p> -->
+
+                </form>
+
+            </div>
+            <!--form div ends   -->
+            <script>
+                 var showOption = ["QnA","MultipleChoice","TorF"];
+
+// hiding all quiztypes
+function showQuiz(id1, wantedQuiztype) {
+
+    for (var i = 0 ; i < showOption.length; i++)
+
+     {
+        var x = document.getElementById(showOption[i]);
+
+        console.log("value", showOption[i]);
+
+        if (x.className.indexOf("w3-hide") === -1) {
+            x.className += "w3-hide";
+            console.log("if.classname of ",x," is ",x.classname);
+        }
+        else {
+            x.className = x.className.replace("w3-show", " ");
+        }
+
+    
+    }
+
+
+    // showing selected quiztype
+var x = document.getElementById(wantedQuiztype);
+
+console.log("select quiz type is ", wantedQuiztype);
+if (x.className.indexOf("w3-show") === -1) 
+{
+    x.className +="w3-show";
+    console.log(x,x.className);
+ }
+else
+{
+        x.className = x.className.replace("w3-show", " ");
+        console.log(x,x.className);
+    }
+ 
+//using switch case
+
+ switch (wantedQuiztype) {
+
+    case showOption[0] :
+
+             
+             document.getElementById("typeAnswer").required = true;
+
+             document.getElementById("answerA").required = false;
+             document.getElementById("answerB").required = false;
+             document.getElementById("answerC").required = false;
+             document.getElementById("answerD").required = false;
+
+             document.getElementById("optionA").required = false;
+             document.getElementById("optionB").required = false;
+             document.getElementById("optionC").required = false;
+             document.getElementById("optionD").required = false;
+             
+             document.getElementById( "true").required = false;
+             document.getElementById("false").required = false;
+             
+             
+              
+         break;
+
+     case showOption[1]:
+            
+        document.getElementById("typeAnswer").required = false;
+
+        document.getElementById("answerA").required = true;
+        document.getElementById("answerB").required = true;
+        document.getElementById("answerC").required = true;
+        document.getElementById("answerD").required = true;
+
+        document.getElementById("optionA").required = true;
+        document.getElementById("optionB").required = true;
+        document.getElementById("optionC").required = true;
+        document.getElementById("optionD").required = true;
+        
+        document.getElementById("true").required = false;
+        document.getElementById("false").required = false;
+         break;
+
+
+     case showOption[2]:
+
+        document.getElementById("typeAnswer").required = false;
+
+        document.getElementById("answerA").required = false;
+        document.getElementById("answerB").required = false;
+        document.getElementById("answerC").required = false;
+        document.getElementById("answerD").required = false;
+
+        document.getElementById("optionA").required = false;
+        document.getElementById("optionB").required = false;
+        document.getElementById("optionC").required = false;
+        document.getElementById("optionD").required = false;
+        
+        document.getElementById("true").required = true;
+        document.getElementById("false").required = true;
+         break;
+
+     default :
+        
+        document.getElementById("typeAnswer").required = false;
+
+        document.getElementById("answerA").required = false;
+        document.getElementById("answerB").required = false;
+        document.getElementById("answerC").required = false;
+        document.getElementById("answerD").required = false;
+
+        document.getElementById("optionA").required = false;
+        document.getElementById("optionB").required = false;
+        document.getElementById("optionC").required = false;
+        document.getElementById("optionD").required = false;
+        
+        document.getElementById("true").required = false;
+        document.getElementById("false").required = false;
+        
+ 
+        }
+
+
+
+ console.log("the quiz type is",wantedQuiztype);
+
+ }
+            </script>
+        </body>
+        </html>

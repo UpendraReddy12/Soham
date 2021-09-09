@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sohamacademy</title>
+  <link rel="icon" href="images/logo.jpeg" sizes="16^16">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="w3-row">
+    <div class="w3-col w3-container" style="width:20% ;"></div>
+    <div class="w3-col w3-container" style="width:60% ;">
+      <center>
+        <p><img src="images/soham.jpeg"></p>
+        <h2>Welcome to Soham Quizbase</h2>
+      </center>
+      <div class="w3-bar w3-white w3-border">
+        <a href="sohamd4.html" class="w3-bar-item w3-button w3-mobile w3-hover-orange"> Dashboard</a>
+        <a href="sohamsearch.html" class="w3-bar-item w3-button w3-mobile w3-green"> Search</a>
+        <a href="sohamcreate a question.html" class="w3-bar-item w3-button w3-mobile w3-hover-orange ">Create a Question</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile w3-hover-orange">My Question</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile w3-hover-orange">Review</a>
+      </div>
+      <div class="w3-card w3-containor w3-light-grey w3-margin-top w3-padding">
+        <div class="w3-bar w3-light-gray">
+          <div class="w3-row">
+            <div class="w3-col s4 w3-right-align w3-text-blue">Theme</div>
+            <div class="w3-col s4 w3-right-align w3-text-blue">Type</div>
+            <div class="w3-col s4 w3-right-align w3-text-blue">Keyword</div>
+          </div>
+          <div class="w3-row">
+            <div class="w3-col s4 w3-center">
+              <select class="w3-select w3-border" name="option" required>
+                <option value="disabled selected">select a Theme</option>
+                <option value="1">Bharat & Its States </option>
+                <option value="2">Hotspots In Bharat</option>
+                <option value="3">People Of Bharat</option>
+                <option value="4">Itihasa Of Bharat</option>
+                <option value="5">World Around Us</option>
+                <option value="6">Our Body</option>
+                <option value="7">Our Body</option>
+              </select>
+            </div>
+            <div class="w3-col s4  w3-center">
+              <select class="w3-select w3-border" name="option">
+                <option value="disabled selected">Choose your option</option>
+                <option value="1">Q&A</option>
+                <option value="2">Multiple Choice</option>
+                <option value="3">True Or False</option>
+                <option value="4">Visual</option>
+                <option value="5">Audio</option>
+                <option value="6">Video </option>
+                <option value="7">Labelling</option>
+              </select>
+            </div>
+            <div class="w3-col s4  w3-center">
+              <input class="w3-input" type="text" placeholder="Enter Keyword">
+            </div>
+          </div>
+          <div>
+            <a href="#" class="w3-button w3-blue  w3-card">Search</a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <p>Search Result -Found 25, page 1 of 5</p>
+      </div>
+      <div class="w3-container">
+        <input class="w3-input w3-border w3-padding" type="text" placeholder="Search for a Questions?" id="myInput"
+          onkeyup="myFunction()">
+
+        <table class=" w3-table-all" id="myTable">
+          <tr class="w3-blue">
+            <th>Theme <i class="fa fa-sort" onclick="sortTable(0)"></i></th>
+            <th>Type <i class="fa fa-sort" onclick="sortTable(1)"></i> </th>
+            <th>Authors <i class="fa fa-sort" onclick="sortTable(2)"> </i></th>
+            <th>Question <i class="fa fa-sort" onclick="sortTable(3)"> </i></th>
+            <th>status <i class="fa fa-sort" onclick="sortTable(4)"></i> </th>
+            <th>show </th>
+          </tr>
+          <tr>
+            <td>World Around us</td>
+            <td>Q &A</td>
+            <td>Upendra</td>
+            <td> what is the capital of Zimbabwe</td>
+            <td><i class="fa fa-check"></i></td>
+            <td>
+              <div class="w3-container">
+
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button
+                         w3-tiny"><i class="fa fa-envelope-open" aria-hidden="true"></i></button>
+
+                <div id="id01" class="w3-modal">
+                  <div class="w3-modal-content">
+                    <div class="w3-container">
+                      <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-display-topright">&times;</span>
+                      <div class="w3-left-align">
+                        <p>Question:What is The capital Zimbabwe"</p>
+                        <p>Answer:Harare</p>
+                        <p>Additional Information:</p>
+                        <p>It Was earlier called Salsbury</p>
+                      </div>
+                      <div class="w3-green w3-centered">
+                        <footer>
+                          <center>please report to admin@sohamacademy.org if you think the above information is
+                            inaccurate</center>
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>People of India</td>
+            <td>MCQ's</td>
+            <td>Rahul</td>
+            <td> what is the capital of india</td>
+            <td> <i class="fa fa-close"></i></td>
+            <td>
+              <div class="w3-container">
+
+                <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-tiny"> <i
+                    class="fa fa-envelope-open" aria-hidden="true"></i></button>
+
+                <div id="id02" class="w3-modal">
+                  <div class="w3-modal-content">
+                    <div class="w3-container">
+                      <span onclick="document.getElementById('id02').style.display='none'"
+                        class="w3-button ">&times;</span>
+                      <div class="w3-left-align"> <p><u>Question</u>:Who is the author the book glimpses of world history?"</p>
+                        <p><u>choices</u>:</p>
+                        <p>A. jawaharlal nehru:</p>
+                        <p>B. mountbattem</p>
+                        <p>C.kapil Dev</p>
+                        <p>D.Adam Glichrist</p>
+                        <p><u>Answer</u>:A.Jawaharlal Nehru</p>
+                        <p><u>Additional Information:</u></p>
+                        <p>He Wrote this book when he was in jail</p></div>
+                      <div class="w3-green w3-centered">
+                        <footer>
+                          <center>please report to admin@sohamacademy.org if you think the above information is
+                            inaccurate</center>
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </div>
+      </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>India</td>
+        <td>Q & A</td>
+        <td> what is the capital of Zimbabwe</td>
+        <td> <i class="fa fa-check"></i></td>
+        <td>
+          <div class="w3-container">
+
+            <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-tiny"><i
+                class="fa fa-envelope-open" aria-hidden="true"></i></button>
+
+            <div id="id03" class="w3-modal">
+              <div class="w3-modal-content">
+                <div class="w3-container">
+                  <span onclick="document.getElementById('id03').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span>
+                  <div class="w3-left-align">
+                    <p><u>Question</u>:Where is this famous monument located?</p>
+                    <img src="images1/hyd.jpeg" class="w3-circle" style="width:27%">
+                    ><p><u>choices</u>:</p>
+                    ><p>A. Hyderabad:</p>
+                    <p>B. jaipur</p>
+                    <p>C. Delhi</p>
+                    <p>D. Agra</p>
+                    <p><u>Answer</u>:A.Hyderabad</p>
+                    <p><u>Additional Information:</u></p>
+                    ><p>this is Golconda Fort in Hyderabad</p>
+                  </div>
+                  <div class="w3-green w3-centered">
+                    <footer>
+                      <center>please report to admin@sohamacademy.org if you think the above information is inaccurate
+                      </center>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    </td>
+    </tr>
+    <tr>
+      <td>Indias Hotspots</td>
+      <td>MCQ's</td>
+      <td>Ganesh</td>
+      <td> what is the capital of Zimbabwe</td>
+      <td> <i class="fa fa-check"></i></td>
+      <td>
+        <div class="w3-container">
+
+          <button onclick="document.getElementById('id04').style.display='block'" class="w3-button w3-tiny"><i
+              class="fa fa-envelope-open" aria-hidden="true"></i></button>
+
+          <div id="id04" class="w3-modal">
+            <div class="w3-modal-content">
+              <div class="w3-container">
+                <span onclick="document.getElementById('id04').style.display='none'"
+                  class="w3-button w3-display-topright">&times;</span>
+                <div class="w3-left-align">
+                  <p><u>Question</u>:The capital of Nepal is Bihar</p>
+                  <p>True or False</p>
+                  <p><u>Answer</u>:False</p>
+                  <p><u>Additional Information:</u></p>
+                  <p>The Capital of Nepal is Kathmandu. Bihar is a state in India.</p>
+                </div>
+                <div class="w3-green w3-centered">
+                  <footer>
+                    <center>please report to admin@sohamacademy.org if you think the above information is inaccurate
+                    </center>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  </td>
+  </tr>
+  </div>
+  </table>
+
+  <div>
+    <table>
+      <tr>
+        <td>
+          <div class="w3-bar w3-bordered">
+            <a href="#" class="w3-button">«</a>
+            <a href="#" class="w3-button w3-green">1</a>
+            <a href="#" class="w3-button">2</a>
+            <a href="#" class="w3-button">3</a>
+            <a href="#" class="w3-button">4</a>
+            <a href="#" class="w3-button">»</a>
+          </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </div>
+
+  </div>
+  </div>
+  <div class="w3-col w3-container" style="width:20% ;"></div>
+  </div>
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr"); 
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[3];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+
+  <script>
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("myTable");
+      switching = true;
+      //Set the sorting direction to ascending:
+      dir = "asc";
+      /*Make a loop that will continue until
+      no switching has been done:*/
+      while (switching) {
+        //start by saying: no switching is done:
+        switching = false;
+        rows = table.rows;
+        /*Loop through all table rows (except the
+        first, which contains table headers):*/
+        for (i = 1; i < (rows.length - 1); i++) {
+          //start by saying there should be no switching:
+          shouldSwitch = false;
+          /*Get the two elements you want to compare,
+          one from current row and one from the next:*/
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          /*check if the two rows should switch place,
+          based on the direction, asc or desc:*/
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              //if so, mark as a switch and break the loop:
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          /*If a switch has been marked, make the switch
+          and mark that a switch has been done:*/
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          //Each time a switch is done, increase this count by 1:
+          switchcount++;
+        } else {
+          /*If no switching has been done AND the direction is "asc",
+          set the direction to "desc" and run the while loop again.*/
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>
