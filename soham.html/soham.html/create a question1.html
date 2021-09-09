@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Soham Academy</title>
+    <link rel="icon" href="images/logo.jpeg" sizes="16*16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+    <p><center><img src="images/soham.jpeg" alt=""></center></p>
+    <h2><center>Welcome to soham Quizbase</center></h2>
+    <div class="w3-row ">
+    <div class="w3-col  w3-container" style="width:20%"> </div>
+    <div class="w3-col  w3-container" style="width:60%">
+      <div class="w3-bar w3-white w3-border">
+        <a href="sohamd4.html" class="w3-bar-item w3-button w3-mobile w3-hover-orange ">Dashboard</a>
+        <a href="sohamsearch.html" class="w3-bar-item w3-button w3-mobile w3-hover-orange">Search</a>
+        <a href="sohamcreate a question.html" class="w3-bar-item w3-button w3-mobile w3-green ">Create a Question</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile  w3-hover-orange">My Question</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile  w3-hover-orange">Review</a> 
+        </div>
+        <form class="w3-container w3-border" action="/action_page.php">
+            <label class="w3-text-teal">Select a Theme</label>
+            <select class="w3-select w3-border" name="option" required>
+                <option value="" disabled selected>Select a Theme</option>
+                <option value="1">Bharat & Its States </option>
+                <option value="2">Hotspots In Bharat</option>
+                <option value="3">People Of Bharat</option>
+                <option value="4">Itihasa Of Bharat</option>
+                <option value="5">World Around Us</option>
+                <option value="6">Our Body</option>
+                <option value="7">Our Body</option>
+              </select>
+               <label class="w3-text-teal">Select your question</label> 
+              <select  onchange="showQuizType(getSelectedType(this))"  class="w3-select w3-border" name="option" required>
+                <option value="" disabled selected>Select your question</option>
+                <option value="QnA">Q&A </option>
+                <option value="MCQ">Multiple choice</option>
+                <option value="TorF">TorF</option>  
+              </select>
+              <label class="w3-text-teal"> question</label>
+                <input class="w3-input w3-gray" type="text" placeholder="Type your question here..." required>
+                <div class="w3-hide" id="QnA">
+                  <label class="w3-text-teal">Answer</label>
+                  <input class="w3-input w3-gray" type="text" name="qnaAnswer" id="qnaAnswer"placeholder="Type your question here..." required>
+                </div>
+                <div class="w3-hide" id="MCQ">
+                   <div class="w3-row-padding">
+                     <div class="w3-half">
+                     <label class="w3-text-teal">Option A</label>
+                        <input class="w3-input w3-border  w3-gray" type="text" name="MCQoptA" id="MCQoptA"placeholder="Type your answer.."required>
+                <label class="w3-text-teal">Option B</label>
+                 <input class="w3-input w3-border w3-gray" type="text" name="MCQoptB"id="MCQoptB"placeholder="Type your answer.."required>
+                   </div>
+                 <div class="w3-half">
+                <label class="w3-text-teal">Option C</label>
+                  <input class="w3-input w3-border  w3-gray" type="text"name="MCQoptC"id="MCQoptC" placeholder="Type your answer.."required>
+                 <label class="w3-text-teal">Option D</label>
+                <input class="w3-input w3-border  w3-gray" type="text" name="MCQoptAD" id="MCQoptD"placeholder="Type your answer.."required>
+                          </div>
+                <div class="w3-container ">   
+             <p>
+               <input class="w3-radio" type="radio" name="MCQanswer"id="MCQanswer" value="A"required>
+             <label>A</label>
+             <input class="w3-radio" type="radio" name="MCQanswer" id="MCQanswer"value="B" required>
+              <label>B</label>
+                 <input class="w3-radio" type="radio" name="MCQanswer" id="MCQanswer"value="C"required >
+                <label>C</label>
+               <input class="w3-radio" type="radio" name="MCQanswer" id="MCQanswer"value="D"required>
+             <label>D</label>
+             </div>
+ 
+              </div>
+                </div>
+                <div class="w3-hide" id="TorF">
+                  <div class="w3-container ">
+                  <label  class="w3-text-teal">Answer</label>
+                  <p>
+                <input class="w3-radio" type="radio" name="ToFanswer" id="ToFanswer" value="A"required>
+                 <label>True</label>
+                   <input class="w3-radio" type="radio" name="ToFanswer"id="ToFanswer" value="B" required>
+                <label>False</label>  
+                </div>
+                </div>
+                 <label class="w3-text-teal">Upload a file</label>
+                <div>
+                <input type="file" id="myFile" name="filename">
+                </div>
+                <label class="w3-text-teal">Additional information</label>
+                <input class="w3-input w3-gray" type="text" placeholder="Additional information" required>
+              <p><button class="w3-btn w3-teal">submit</button></p>
+            </form>
+            </div>
+            <div class="w3-col  w3-container" style="width:20%"> </div>
+            <script>
+              function getSelectedType(ddown) 
+              {
+                return ddown.value;
+              }
+              
+              function ShowQuiztype(selectedQType)
+              {
+                var qTypes= ["QnA", "MCQ", "ToF"];
+                for (i=0; i < qTypes.length; i++)
+                {
+                  var qType = document.getElementById(qTypes[i]);
+                  if (qType.className.indexOf("w3-show") > 0 ) 
+                  {
+                    qType.className = qType.className.replace(" w3-show", "");
+                  }
+                }
+                var currQType = document.getElementById(selectedQType);
+                currQType.className += " w3-show";
+                 
+              
+                  
+                switch (selectedQType)
+                {
+                 
+                  case "QnA":
+                      
+                      document.getElementById("qnaAnswer").required=true;
+                      document.getElementById("MCQoptA").required=false;
+                      document.getElementById("MCQoptB").required=false;
+                      document.getElementById("MCQoptC").required=false;
+                      document.getElementById("MCQoptD").required=false;
+                      document.getElementById("MCQanswer").required=false;
+                      document.getElementById("ToFanswer").required=false;
+                      break; 
+                  case "MCQ":
+                     
+                    document.getElementById("qnaAnswer").required=false;
+                      document.getElementById("MCQoptA").required=true;
+                      document.getElementById("MCQoptB").required=true;
+                      document.getElementById("MCQoptC").required=true;
+                      document.getElementById("MCQoptD").required=true;
+                      document.getElementById("MCQanswer").required=true;
+                      document.getElementById("ToFanswer").required=false;
+                      break; 
+                  case "ToF":
+                    
+                    document.getElementById("qnaAnswer").required=false;
+                      document.getElementById("MCQoptA").required=false;
+                      document.getElementById("MCQoptB").required=false;
+                      document.getElementById("MCQoptC").required=false;
+                      document.getElementById("MCQoptD").required=false;
+                      document.getElementById("MCQanswer").required=false;
+                      document.getElementById("ToFanswer").required=true; 
+                      break;
+                }
+              }
+              
+              </script>
+ 
+</body>
+</html>   
